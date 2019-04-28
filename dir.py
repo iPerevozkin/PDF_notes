@@ -3,7 +3,6 @@ from typing import List
 
 l: List[str] = []
 
-
 def dir_loop():
     for root, dirs, files in os.walk("F:\Файлы\PDF_notes\lib"):
         for file in files:

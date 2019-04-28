@@ -46,7 +46,7 @@ button8 = Button(frame_Button_categoty, text="Add", width=50)
 
 
 # пакует все виджеты
-listbox1.pack(side=LEFT)
+listbox1.pack(side = LEFT)
 
 frame.pack(side = BOTTOM, expand = True)
 frame_Button_categoty.pack(side = TOP, pady = 5)
