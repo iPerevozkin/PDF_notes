@@ -3,6 +3,8 @@ import os
 from tkinter import filedialog
 #######################################################
 # функция выбора директории и записи её в переменную
+
+
 def searchDirectory():
     directory = filedialog.askdirectory()
     handle = open('directory.txt', 'w')
@@ -10,14 +12,14 @@ def searchDirectory():
     handle.close()
     pass
 
-
-
 # функция - обход директории с глубокой рекурсией на поиск .pdf
+
+
 def dirLoop():
     # контейнер list
     directory = []
     handle = open('directory.txt', 'r')
-    l = []
+    massiv = []
     for line in handle.readlines():
         directory.append(line)
     handle.close()
@@ -27,7 +29,7 @@ def dirLoop():
         for file in files:
             if file.endswith(".pdf"):
                 # добавление в контейнер list ИМЕНИ найденного файла
-                l.append([(os.path.join(file)), root])
-    return l
+                massiv.append([(os.path.join(file)), root])
+    return massiv
 
 #############################################################################
